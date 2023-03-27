@@ -57,7 +57,7 @@ Add an ACL tag to your
 
 1. Add a new tag to the `tagOwners` list, something like this:
 
-    ```json
+    ```jsonc
     // ACL tags.
     "tagOwners": {
         "tag:dialtun": [],
@@ -67,7 +67,7 @@ Add an ACL tag to your
 2. Add a section for `dialtun` to the `acls` block (assuming you keep the
    default port range of 64000-64999):
 
-    ```json
+    ```jsonc
     "acls": [
         // ...
 
@@ -86,7 +86,7 @@ Add an ACL tag to your
    server ports, but not any other ports (such as SSH) on the dev machines (this
    assumes a dev machine of "devbox1"):
 
-    ```json
+    ```jsonc
      "acls": [
         // ...
 
