@@ -1,0 +1,18 @@
+[[processes]]
+name = "tailscaled"
+run = [
+    "/app/tailscaled",
+    "--state=/data/tailscale/tailscaled.state",
+    "--socket=/var/run/tailscale/tailscaled.sock",
+    "--tun=userspace-networking",
+    "--outbound-http-proxy-listen=localhost:1055",
+]
+
+[[processes]]
+name = "tailscale-up"
+pre = "/app/tailscale up --authkey={{TS_AUTHKEY}}"
+post = "/app/tailscale logout"
+
+[[processes]]
+name = "dialtun"
+run = [ "/usr/bin/openresty", "-g", "daemon off; env DIALTUN_BASE_PORT;" ]

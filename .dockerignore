@@ -1,0 +1,14 @@
+/.git
+/.github
+/.vscode
+*.md
+.dockerignore
+.editorconfig
+.env
+.gitattributes
+.gitignore
+.prettierc
+Dockerfile
+fly.toml
+Justfile
+package*.json
