@@ -20,7 +20,7 @@ dialpad:
 │ │  4  │ │  5  │ │  6  │ │
 │ └─────┘ └─────┘ └─────┘ │
 │ ┌─────┐ ┌─────┐ ┌─────┐ │
-│ │PQRS │ │ TUV │ │WXYZ │ │
+│ │PQRS │ │ TUV │ │ WXYZ│ │
 │ │  7  │ │  8  │ │  9  │ │
 │ └─────┘ └─────┘ └─────┘ │
 │         ┌─────┐         │
@@ -34,6 +34,11 @@ A base port number -- 64000, by default -- is added to the first three numbers
 of the service name. The final result is that a domain name like
 "agendas-devbox1.dev.example.com" would map to port 64243 (64000 + 243) on the
 "devbox1" machine on your Tailnet.
+
+See [this blog post][dialtunpost] for more information on the genesis of
+`dialtun`.
+
+[dialtunpost]: https://michaelalynmiller.com/blog/2023/04/05/dialtun/
 
 ## Important Security Warning
 
